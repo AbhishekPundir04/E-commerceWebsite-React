@@ -1,26 +1,35 @@
-import './App.css';
-import Body from './components/Layout/Body/Body';
-import Footer from './components/Layout/Footer/Footer';
-import Header from './components/Layout/Header/Header';
-import  { createBrowserRouter,RouterProvider } from 'react-router-dom'
-import Home from './components/Pages/Home';
-import AvailableItems from './components/Layout/Items/AvailableItems';
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Pages/Home";
+import AboutUs from "./components/Pages/AboutsUs";
+import RouteLayout from "./components/Route/Route";
+import Error from "./components/ErrorPage/Error";
+import AvailableItems from "./components/Layout/Items/AvailableItems";
+// import Header from "./components/Layout/Header/Header";
+import Contact from "./components/Pages/ContactUs";
+
 
 const router = createBrowserRouter([
-  {path: '/', element: <p><Home/></p>},
-  {path:'/store', element: <AvailableItems/>}
+  {
+    path: "/",
+    element: <RouteLayout />,
+    errorElement: <Error />,
+    children: [
+      { path: "/home", element: <Home /> },
+      { path: "/aboutUs", element: <AboutUs /> },
+      { path: "/store", element: <AvailableItems /> },
+      { path:"/contactus", element: <Contact/>}
+    ],
+  },
+
+  
 ]);
 function App() {
   return (
     <div>
-    <div>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router} />
+      {/* <Header/> */}
     </div>
-    <Header/>
-    <Body/>
-    <Footer/>
-    </div>
-    
   );
 }
 

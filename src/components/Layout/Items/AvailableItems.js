@@ -1,30 +1,48 @@
-import React, { useState } from "react";
-import classes from "./AvailableItems.module.css";
-import ProductItems from "./ProductItem/ProductItem";
-
-
+import classes from './AvailableItems.module.css';
+import ProductItems from './ProductItem/ProductItem';
+const productsArr = [
+  {
+    id: "1",
+    title: "Colors",
+    price: 100,
+    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
+  },
+  {
+    id: "2",
+    title: "Black and white Colors",
+    price: 50,
+    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
+  },
+  {
+    id: "3",
+    title: "Yellow and Black Colors",
+    price: 70,
+    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
+  },
+  {
+    id: "4",
+    title: "Blue Color",
+    price: 100,
+    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
+  },
+];
 
 const AvailableItems = (props) => {
- const [movies, setmovies] = useState([])
- const fetchMovieHandler = () =>{
-  fetch('"https://swapi.dev/api/films/', {}).then(response => {
-    return response.json();
-  }).then(data=>{
-    const transformedmovies =data.movies.map(movieData =>{
-      return {
-        id: movieData.episode_id,
-        title: movieData.title,
-        openingText: movieData.opening_crwal,
-        releaseDate: movieData.release_date
-      }
-    })
-    setmovies(transformedmovies);
-  })
-}  
+  const itemList = productsArr.map((item) => (
+    <li key={item.id} className={classes.item}>
+      <ProductItems
+        title={item.title}
+        price={item.price}
+        image={item.imageUrl}
+      />
+    </li>
+  ));
+
   return (
     <div className={classes.container}>
-      <buuton onClick={fetchMovieHandler}>movie</buuton>
-      <ProductItems movies= {movies}/>
+      <section className={classes.section}>
+        <ul className={classes.itemList}>{itemList}</ul>
+      </section>
     </div>
   );
 };

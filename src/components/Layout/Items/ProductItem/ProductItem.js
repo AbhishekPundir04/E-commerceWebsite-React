@@ -1,11 +1,15 @@
 import { Fragment } from "react";
-import classes from "./ProductItem.module.css";
-
 const ProductItems = (props) => {
+    
   return (
     <Fragment>
-      <div className={classes.Items}>
-        <button className={classes.button}>Add To cart</button>
+      <div>
+        <h3>{props.title}</h3>
+        <div>
+          <img src={props.image}alt="some images"></img>
+          <div>Rs. {props.price}</div>
+          <button> Add Cart</button>
+        </div>
       </div>
     </Fragment>
   );

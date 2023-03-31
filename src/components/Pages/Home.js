@@ -1,37 +1,42 @@
 import { Fragment } from "react";
-import "./Home.css";
+import styles from './Home.module.css';
+
 const Home = () => {
   return (
     <Fragment>
-      <div>
-        
-      </div>
-      <h2 className="h2"> Tours </h2>
+      <div className={styles.div}></div>
+      <h2 className={styles.h2}>Tours</h2>
 
       <section>
-        <div>
-          
+        <div className={styles.para}>
           <p>
-            {" "}
-            KRISNA ALBUM, Delhi <button className="button1">BUY TICKETS</button>
+            JUL16 MUMBAI.SUN TOE ALBUM{" "}
+            <button className={styles.button1}>BUY TICKETS</button>{" "}
           </p>
-          <hr />
+          <hr className={styles.hr} />
           <p>
-          RAFTAAR ALBUM, Delhi <button className="button1">BUY TICKETS</button>
+            TAJ ALBUM,MUMBAI <button className={styles.button1}>BUY TICKETS</button>
           </p>
-          <hr />
+          <hr className={styles.hr} />
           <p>
-           KING ALBUM, Delhi <button className="button1">BUY TICKETS</button>
+            ROZ ALBUM,PUNE <button className={styles.button1}>BUY TICKETS</button>
           </p>
-          <hr />
+          <hr className={styles.hr} />
           <p>
-            KARMA ALBUM, Dehradun <button className="button1">BUY TICKETS</button>
+            MIMMI ALBUM,MUMBAI <button className={styles.button1}>BUY TICKETS</button>
           </p>
-          <hr />
-          
+          <hr className={styles.hr} />
+          <p>
+            LIGGI ALBUM,MUMBAI <button className={styles.button1}>BUY TICKETS</button>
+          </p>
+          <hr className={styles.hr} />
+          <p>
+            ROSHNI ALBUM,MUMBAI <button className={styles.button1}>BUY TICKETS</button>
+          </p>
         </div>
       </section>
     </Fragment>
   );
 };
+
 export default Home;

@@ -1,27 +1,36 @@
-import { Fragment } from "react";
-
-import classes from "./NavBar.module.css";
+import classses from "./NavBar.module.css";
+import { NavLink } from "react-router-dom";
+import HeaderCartButton from "../Header/HeaderCartButton";
 
 const NavBar = (props) => {
- 
- 
   return (
-    <Fragment>
-      <header>
-      <nav className={classes.navbar}>
-        <nav className={classes.icon} to="/Home">
-          HOME
-        </nav>
-        <nav className={classes.icon} to="/St
-        <Headerore">
-          STORE
-        </nav>
-        <nav className={classes.icon} to="/AboutUs">
-          ABOUT
-        </nav> 
-      </nav>
-      </header>
-    </Fragment>
+    <nav className={classses.nav}>
+      <ul className={classses.navList}>
+        <li className={classses.navItem}>
+          <NavLink className={classses.navNavLink} to="/home">
+            Home
+          </NavLink>
+        </li>
+        <li className={classses.navItem}>
+          <NavLink className={classses.navNavLink} to="/store">
+            Store
+          </NavLink>
+        </li>
+        <li className={classses.navItem}>
+          <NavLink className={classses.navNavLink} to="/aboutUs">
+            About Us
+          </NavLink>
+        </li>
+        <li className={classses.navItem}>
+          <NavLink className={classses.navNavLink} to="/contactUs">
+            Contact Us 
+          </NavLink>
+        </li>
+
+        <HeaderCartButton onClick = {props.onShowCart}>Cart</HeaderCartButton>
+      </ul>
+    </nav>
   );
 };
+
 export default NavBar;

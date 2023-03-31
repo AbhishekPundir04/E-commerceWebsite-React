@@ -1,41 +1,36 @@
 .button {
-    cursor: pointer;
-    float: right;
-   
-    font-weight: bold;
-    display: flex;
-    padding-right: 11px;
-    background-color: #000;
-    border: 2px solid orange;
-    border-radius: 5px;
-    color: #eefc5a;
-    cursor: pointer;
-    margin-right: 50px;
-    width: 53px;
-      height: 25px;
-  }
-  .button:hover {
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #007bff;
-  }
-  
-  
-  .badge {
-    position: absolute;
-    color: #56ccf2;
-    font-size: 20px;
-    top: -3px;
-    right: 49px;
-  }
-  
-  .logoutButton {
-    background-color: black;
-    color: white;
-    border: 2px solid blue;
-    padding: 5px;
-    border-radius: 11px;
-    margin-left: 35px;
-    float: right;
-    margin: 0 15px 0px 0px;
-  }
+  display: flex;
+  align-items: center;
+  font: inherit;
+  background-color: #2a2a72;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover,
+.button:active {
+  background-color: #3d3d7a;
+  border-color: white;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.text {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.value {
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid white;
+  border-radius: 12px;
+}
