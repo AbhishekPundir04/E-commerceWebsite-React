@@ -1,0 +1,32 @@
+.product {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    margin: 1rem;
+    padding: 1rem;
+    width: 25rem;
+  }
+  
+  .image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

@@ -1,6 +1,14 @@
-import classes from "./ContactUs.module.css";
+// const ContactUs = props =>{
+//     return <div>
+//         <h1>Contact Us</h1>
+//     </div>
+// }
 
-const Contact = () => {
+// export default ContactUs
+
+import classes from "./Contact.module.css";
+
+const ContactUs = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const name = event.target.elements.name.value;
@@ -9,7 +17,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://new-1-70ad2-default-rtdb.firebaseio.com/Credental.json",
+        "https://react-https-ad447-default-rtdb.firebaseio.com//Credental.json",
         {
           method: "POST",
           body: JSON.stringify({ name, email, phone }),
@@ -45,4 +53,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactUs;

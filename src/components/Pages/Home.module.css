@@ -1,65 +1,62 @@
 /* Home.module.css */
 
-.div {
-  background-color: #f2f2f2;
-  height: 200px;
-}
 
-.h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  color: #1a1a1a;
-}
-
-.para {
-  text-align: center;
-  margin: 50px auto;
-  max-width: 500px;
-}
-
-.para p {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #1a1a1a;
-}
-
-.button1 {
-  background-color: #00bfff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button1:hover {
-  background-color: #1a1a1a;
-}
-
-.hr {
-  border-top: 2px solid #f2f2f2;
-  margin: 10px 0;
-}
-
-.hr::before {
-  content: "";
-  display: inline-block;
-  margin: 0 10px -2px 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #00bfff;
-}
-
-.hr::after {
-  content: "";
-  display: inline-block;
-  margin: 0 0 -2px 10px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #00bfff;
-}
+  
+  .h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+  }
+  
+  .para {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 500px;
+  }
+  
+  .para p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+  }
+  
+  .button1 {
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button1:hover {
+    background-color: #1a1a1a;
+  }
+  
+  .hr {
+    border-top: 2px solid #f2f2f2;
+    margin: 10px 0;
+  }
+  
+  .hr::before {
+    content: "";
+    display: inline-block;
+    margin: 0 10px -2px 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #00bfff;
+  }
+  
+  .hr::after {
+    content: "";
+    display: inline-block;
+    margin: 0 0 -2px 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #00bfff;
+  }

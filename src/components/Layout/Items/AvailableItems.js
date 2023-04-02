@@ -1,5 +1,5 @@
-import classes from './AvailableItems.module.css';
-import ProductItems from './ProductItem/ProductItem';
+import classes from './Available.module.css';
+import ProductItems from './ProductItems/ProductItems';
 const productsArr = [
   {
     id: "1",
@@ -31,6 +31,8 @@ const AvailableItems = (props) => {
   const itemList = productsArr.map((item) => (
     <li key={item.id} className={classes.item}>
       <ProductItems
+        key ={item.id}
+        id={item.id}
         title={item.title}
         price={item.price}
         image={item.imageUrl}

@@ -1,38 +1,35 @@
 import { Fragment } from "react";
-import styles from './Home.module.css';
+import classes from './Home.module.css';
 
 const Home = () => {
   return (
     <Fragment>
-      <div className={styles.div}></div>
-      <h2 className={styles.h2}>Tours</h2>
+      <div className={classes.div}></div>
+      <h2 className={classes.h2}>Tours</h2>
 
       <section>
-        <div className={styles.para}>
+        <div className={classes.para}>
           <p>
-            JUL16 MUMBAI.SUN TOE ALBUM{" "}
-            <button className={styles.button1}>BUY TICKETS</button>{" "}
+           Sep 14 MUMBAI. TRAP ALBUM{" "}
+            <button className={classes.button1}>BUY TICKETS</button>{" "}
           </p>
-          <hr className={styles.hr} />
+          <hr className={classes.hr} />
           <p>
-            TAJ ALBUM,MUMBAI <button className={styles.button1}>BUY TICKETS</button>
+          Aug 11 Delhi. No CAP ALBUM <button className={classes.button1}>BUY TICKETS</button>
           </p>
-          <hr className={styles.hr} />
+          <hr className={classes.hr} />
           <p>
-            ROZ ALBUM,PUNE <button className={styles.button1}>BUY TICKETS</button>
+           Jan 12 MYP ALBUM, DUN <button className={classes.button1}>BUY TICKETS</button>
           </p>
-          <hr className={styles.hr} />
+          <hr className={classes.hr} />
           <p>
-            MIMMI ALBUM,MUMBAI <button className={styles.button1}>BUY TICKETS</button>
+             Feb 10 NEW ALBUM,PB <button className={classes.button1}>BUY TICKETS</button>
           </p>
-          <hr className={styles.hr} />
+          <hr className={classes.hr} />
           <p>
-            LIGGI ALBUM,MUMBAI <button className={styles.button1}>BUY TICKETS</button>
+           Nov 12 GOOGLE PAY, DUN <button className={classes.button1}>BUY TICKETS</button>
           </p>
-          <hr className={styles.hr} />
-          <p>
-            ROSHNI ALBUM,MUMBAI <button className={styles.button1}>BUY TICKETS</button>
-          </p>
+          
         </div>
       </section>
     </Fragment>

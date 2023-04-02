@@ -1,58 +1,37 @@
+import { useContext } from "react";
 import Modal from "../UI/Modal";
+import classes from "./Cart.module.css";
+import CartContext from "../store/cart-context";
 
 const Cart = (props) => {
-  // const cartItems = (
-  //   <ul>
-  //     {[
-  //       {
-  //         title: "Colors",
+  const cartCtx = useContext(CartContext);
 
-  //         price: 100,
-
-  //         imageUrl:
-  //           "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-
-  //         quantity: 2,
-  //       },
-
-  //       {
-  //         title: "Black and white Colors",
-
-  //         price: 50,
-
-  //         imageUrl:
-  //           "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-
-  //         quantity: 3,
-  //       },
-
-  //       {
-  //         title: "Yellow and Black Colors",
-
-  //         price: 70,
-
-  //         imageUrl:
-  //           "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-
-  //         quantity: 1,
-  //       },
-  //     ].map((item) => (
-  //       <li>{item.title} {item.price} {<img src={item.imageUrl} alt={item.title} />}</li>
-  //     ))}
-  //   </ul>
-  // );
+  const cartItems = (
+    <ul className={classes["cart-items"]}>
+      {cartCtx.items.map((item) => (
+        <li key={item.id}>
+          {item.name} {item.price}
+          <img src={item.image} alt={item.name} />
+          <button onClick={() => cartCtx.removeItem(item.id)}>-</button>
+          <button onClick={() => cartCtx.addItem({...item, amount: 1})}>+</button>
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
-    <Modal onClose ={props.onClose}>
-      {/* {cartItems} */}
-      <div>total</div>
-      <div>$100</div>
-
-      <div>
-        <button onClick={props.onClose}>close</button>
-        <button>Order</button>
+    <Modal onClose={props.onClose}>
+      {cartItems}
+      <div className={classes.total}>Total</div>
+      <div className={classes["total-amount"]}>Rs. {cartCtx.totalAmount}</div>
+      <div className={classes.actions}>
+        <button className={classes["button--alt"]} onClick={props.onClose}>
+          Close
+        </button>
+        <button className={classes.button}>Order</button>
       </div>
     </Modal>
   );
 };
+
 export default Cart;

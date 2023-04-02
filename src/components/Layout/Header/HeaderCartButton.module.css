@@ -1,36 +1,36 @@
 .button {
-  display: flex;
-  align-items: center;
-  font: inherit;
-  background-color: #2a2a72;
-  color: white;
-  border: 1px solid transparent;
-  border-radius: 25px;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.button:hover,
-.button:active {
-  background-color: #3d3d7a;
-  border-color: white;
-}
-
-.icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.5rem;
-}
-
-.text {
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-.value {
-  margin-left: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  border: 1px solid white;
-  border-radius: 12px;
-}
+    display: flex;
+    align-items: center;
+    font: inherit;
+    background-color: #2a2a72;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .button:hover,
+  .button:active {
+    background-color: #3d3d7a;
+    border-color: white;
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .text {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  .value {
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid white;
+    border-radius: 12px;
+  }

@@ -1,7 +1,12 @@
-const Footer = props => {
-    return <div>
-        <h2>The Generics</h2>
-    </div>
-}
+import React from 'react';
+import classes from './Footer.module.css';
 
-export default Footer
+const Footer = (props) => {
+  return (
+    <div className={classes.footer}>
+      <h2 className={classes.title}>The Generics</h2>
+    </div>
+  );
+};
+
+export default Footer;
