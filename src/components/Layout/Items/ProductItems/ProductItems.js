@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Fragment } from "react";
+// import classes from './ProductItems.module.css'
 import ItemForm from "../ItemForm";
 import CartContext from "../../../store/cart-context";
 
@@ -21,7 +22,7 @@ const ProductItems = (props) => {
         <h3>{props.title}</h3>
         <div>
           <img src={props.image}alt="some images"></img>
-          <div>${props.price}</div>
+          <div>Rs.{props.price}</div>
         </div>
         <div>
            <ItemForm onAddToCart = {addToCartHandler}/> 

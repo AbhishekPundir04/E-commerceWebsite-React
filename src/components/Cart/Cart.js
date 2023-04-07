@@ -12,8 +12,8 @@ const Cart = (props) => {
         <li key={item.id}>
           {item.name} {item.price}
           <img src={item.image} alt={item.name} />
-          <button onClick={() => cartCtx.removeItem(item.id)}>-</button>
-          <button onClick={() => cartCtx.addItem({...item, amount: 1})}>+</button>
+          <button onClick={() => cartCtx.removeItem(item.id)}>Remove</button>
+          <button onClick={() => cartCtx.addItem({...item, amount: 1})}>Add</button>
         </li>
       ))}
     </ul>

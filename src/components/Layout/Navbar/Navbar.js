@@ -3,7 +3,9 @@ import { NavLink } from "react-router-dom";
 
 import classes from "./Navbar.module.css";
 import HeaderCartButton from "../Header/HeaderCartButton";
+
 const Navbar = (props) => {
+
   return (
     <Fragment>
       <nav className={classes.navbar}>
